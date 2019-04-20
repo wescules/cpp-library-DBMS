@@ -32,11 +32,12 @@ public:
 		cout << "===========================================" << endl;
 		for (auto i : books) {
 			if (i.status == "NO")
-				cout << left << setw(20) << i.id << " " << setw(23) << i.title << '\n';
+				cout << left << setw(10) << i.id << " " << setw(23) << i.title << '\n';
 		}
 	}
 
 	void writeToFile(vector<book> books) {
+		this->books = books;
 		ofstream outfile("books.txt");
 		int j = 0;
 		int size = books.size();

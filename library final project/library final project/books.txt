@@ -4,7 +4,7 @@ Author(s):Katherine Paterson
 ISBN:12345676
 Publication Year:October 21, 1977
 Publisher:Thomas Y. Crowell Co.
-Checked Out: user
+Checked Out: NO
 
 ID:2
 Title:Fifty Shades of Grey
@@ -20,12 +20,28 @@ Author(s):E. L. James
 ISBN:12345676
 Publication Year:May 2011
 Publisher:Thomas Y. Crowell Co.
-Checked Out: NO
+Checked Out: user
 
 ID:4
-Title:
-Author(s):emem
-ISBN:emememem
-Publication Year:emememem
-Publisher:emememem
+Title:D&D manual
+Author(s):E. L. James
+ISBN:12345676
+Publication Year:May 2011
+Publisher:Y. Crowell Co.
+Checked Out: NO
+
+ID:5
+Title:intro to programming
+Author(s):wesley andrade
+ISBN:1239843
+Publication Year:19-32-23
+Publisher:Addison
+Checked Out: NO
+
+ID:6
+Title:mac miller
+Author(s):mac stiller
+ISBN:123423
+Publication Year:234234
+Publisher:wesley
 Checked Out: NO
