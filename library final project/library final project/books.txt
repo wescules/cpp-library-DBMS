@@ -1,15 +1,31 @@
-ID: 1
-Title: bridge to terabithia
-Author(s): Katherine Paterson
-ISBN: 12345676
-Publication Year: October 21, 1977
-Publisher: Thomas Y. Crowell Co.
+ID:1
+Title:bridge to terabithia
+Author(s):Katherine Paterson
+ISBN:12345676
+Publication Year:October 21, 1977
+Publisher:Thomas Y. Crowell Co.
+Checked Out: user
+
+ID:2
+Title:Fifty Shades of Grey
+Author(s):E. L. James
+ISBN:12345676
+Publication Year:May 2011
+Publisher:Thomas Y. Crowell Co.
+Checked Out: wescules
+
+ID:3
+Title:of GreyFifty Shades
+Author(s):E. L. James
+ISBN:12345676
+Publication Year:May 2011
+Publisher:Thomas Y. Crowell Co.
 Checked Out: NO
 
-ID: 2
-Title: Fifty Shades of Grey
-Author(s):  E. L. James
-ISBN: 12345676
-Publication Year: May 2011
-Publisher: Thomas Y. Crowell Co.
+ID:4
+Title:
+Author(s):emem
+ISBN:emememem
+Publication Year:emememem
+Publisher:emememem
 Checked Out: NO
