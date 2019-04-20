@@ -4,7 +4,7 @@ Author(s):Katherine Paterson
 ISBN:12345676
 Publication Year:October 21, 1977
 Publisher:Thomas Y. Crowell Co.
-Checked Out: NO
+Checked Out: user
 
 ID:2
 Title:Fifty Shades of Grey

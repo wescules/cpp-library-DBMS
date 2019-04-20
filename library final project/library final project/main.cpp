@@ -5,44 +5,51 @@
 #include "Librarian.h"
 using namespace std;
 
-void customerMenu(Customer u, Library l, string user, string pass) {
+void customerMenu(Customer u, Library l) {
 
 	int choice, id;
+	string str;
 	cout << "\n=======LIBRARY MENU=======" << endl;
 	cout << "1. Display all avalible Books" << endl;
 	cout << "2. Check Out Book" << endl;
 	cout << "3. Display Checked out books" << endl;
 	cout << "4. Return a Book" << endl;
-	cout << "5. Exit" << endl << endl;
+	cout << "5. Search for a book" << endl;
+	cout << "6. Exit" << endl << endl;
 	cin >> choice;
 	switch (choice)
 	{
 	case 1 :
 		u.printAllAvalibleBooks();
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	case 2:
 		u.printAllAvalibleBooks();
 		cout << "Enter ID of book you want to check out: ";
 		cin >> id;
 		u.checkoutBook(id);
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	case 3:
 		u.printCheckedOutBooks();
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	case 4:
 		u.printCheckedOutBooks();
 		cout << "Enter ID of book you want to return: ";
 		cin >> id;
 		u.returnBook(id);
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	case 5:
+		cout << "Enter a string to search for: ";
+		cin >> str;
+		u.search(str);
+		customerMenu(u, l);
+	case 6:
 		exit(1);
 	default:
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	}
 }
 
-void LibrarianMenu(Librarian u, Library l, string user, string pass) {
+void LibrarianMenu(Librarian u, Library l) {
 
 	int choice, id;
 	cout << "\n=======ADMIN LIBRARY MENU=======" << endl;
@@ -57,29 +64,29 @@ void LibrarianMenu(Librarian u, Library l, string user, string pass) {
 	{
 	case 1:
 		u.printAllAvalibleBooks();
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	case 2:
 		u.printAllBooks();
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	case 3:
 		u.addBook();
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	case 4:
 		u.printAllBooks();
 		cout << "Enter the ID of the book you want to edit: ";
 		cin >> id;
 		u.updateBook(id);
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	case 5:
 		u.printAllBooks();
 		cout << "Enter the ID of the book you want to delete: ";
 		cin >> id;
 		u.deleteBook(id);
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	case 6:
 		exit(1);
 	default:
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	}
 }
 
@@ -106,14 +113,14 @@ int main() {
 	if (!loggedIn)
 		exit(1);
 	else if(u.getType() == "C"){
-		Customer u(user, pass);
+		Customer u;
 		Library l;
-		customerMenu(u, l, user, pass);
+		customerMenu(u, l);
 	}
 	else if (u.getType() == "L") {
 		Librarian u;
 		Library l;
-		LibrarianMenu(u, l, user, pass);
+		LibrarianMenu(u, l);
 	}
 
 	system("pause");
