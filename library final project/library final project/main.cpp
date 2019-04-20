@@ -113,7 +113,7 @@ int main() {
 	if (!loggedIn)
 		exit(1);
 	else if(u.getType() == "C"){
-		Customer u;
+		Customer u(user);
 		Library l;
 		customerMenu(u, l);
 	}

@@ -12,11 +12,15 @@ using namespace std;
 class Customer : public Users {
 private:
 	vector<book> books = getBooks();
+	string user;
 public:
+	Customer(string user) {
+		this->user = user;
+	}
 	void checkoutBook(int id) {
 		for (int i = 0; i < books.size(); i++) {
 			if (books[i].id == id) {
-				books[i].status = getUser();
+				books[i].status = user;
 				break;
 			}
 		}
@@ -38,7 +42,7 @@ public:
 	}
 	void returnBook(int id) {
 		for (int i = 0; i < books.size();i++) {
-			if (books[i].status == getUser() && books[i].id == id) {
+			if (books[i].status == user && books[i].id == id) {
 				books[i].status = "NO";
 				break;
 			}
@@ -47,12 +51,12 @@ public:
 	}
 
 	void printCheckedOutBooks() {
-		cout << "Checked out Books by: " << getUser() << endl;
+		cout << "Checked out Books by: " << user << endl;
 		cout << left << setw(20) << "ID" << " " << setw(23) << "Title" << '\n';
 		cout << "===========================================" << endl;
 
 		for (auto i : books) {
-			if (i.status == getUser()) {
+			if (i.status == user){
 				cout << left << setw(20) << i.id << " " << setw(23) << i.title << '\n';
 			}
 		}
